@@ -1,0 +1,3 @@
+Setup on Fedora:
+
+dnf -y install minipro gputils gpsim srecord
