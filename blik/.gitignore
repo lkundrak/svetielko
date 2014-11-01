@@ -1,0 +1,6 @@
+.*.sw?
+*.conf
+*.bin
+*.cod
+*.hex
+*.lst
