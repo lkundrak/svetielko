@@ -39,7 +39,7 @@ fuses.conf:
 
 # Replace config word with our one
 $(NAME)-fuses.conf: fuses.conf $(NAME).hex
-	sed "s/\(conf_word = 0x21\).*/\1$$(srec_cat $(NAME).hex --intel --exclude 0x0 $(CONFIG) -offset -$(CONFIG) -o - --hex-dump |sed 's/.*: \(..\).*/\1/')/" <fuses.conf >$@
+	sed "s/\(conf_word = 0x..\).*/\1$$(srec_cat $(NAME).hex --intel --exclude 0x0 $(CONFIG) -offset -$(CONFIG) -o - --hex-dump |sed 's/.*: \(..\).*/\1/')/" <fuses.conf >$@
 
 # Chuck mess
 clean:
