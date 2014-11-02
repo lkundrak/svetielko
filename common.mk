@@ -23,7 +23,7 @@ run: $(NAME).hex
 # Program
 upload: $(NAME).bin $(NAME)-fuses.conf
 	# Program memory
-	$(MINIPRO) $(MINIPRO_FLAGS) -w $^
+	$(MINIPRO) $(MINIPRO_FLAGS) -w $(NAME).bin
 	# Config memory
 	$(MINIPRO) $(MINIPRO_FLAGS) -e -c config -w $(NAME)-fuses.conf
 
