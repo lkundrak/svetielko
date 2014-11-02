@@ -27,6 +27,11 @@ upload: $(NAME).bin $(NAME)-fuses.conf
 	# Config memory
 	$(MINIPRO) $(MINIPRO_FLAGS) -e -c config -w $(NAME)-fuses.conf
 
+# Get the program
+download:
+	# Program memory
+	$(MINIPRO) $(MINIPRO_FLAGS) -r $(NAME).bin
+
 # Read out the config word from chip
 fuses.conf:
 	$(MINIPRO) $(MINIPRO_FLAGS) -c config -r fuses.conf
